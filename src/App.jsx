@@ -1,18 +1,25 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./common/Navbar";
-import Footer from "./common/Footer";
+import Header from "./common/Header";
+import Sidebar from "./common/Sidebar";
 
-const Home = lazy(() => import("./pages/home/Home"));
+const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));
 
 function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <Footer />
+      <div className="w-full flex">
+        <div className="w-20">
+          <Sidebar />
+        </div>
+        <div className="w-80">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </div>
+      </div>
     </Suspense>
   );
 }
