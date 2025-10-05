@@ -1,0 +1,11 @@
+[
+  {
+    "name": "User",
+    "email": "User@barasingha.com",
+    "password": "Admin1234",
+    "status": true,
+    "category": true,
+    "customers": ["test", "Admin"],
+    "role": "Dev-Admin"
+  }
+]

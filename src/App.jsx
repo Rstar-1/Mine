@@ -12,7 +12,7 @@ function App() {
         <div className="w-20">
           <Sidebar />
         </div>
-        <div className="w-80">
+        <div className="w-80 h-100 overflow-hidden">
           <Header />
           <Routes>
             <Route path="/" element={<Dashboard />} />
