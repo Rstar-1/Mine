@@ -2,8 +2,8 @@ import React from "react";
 
 const Container = ({ children }) => {
   return (
-    <div className="h-page overflow-auto w-full bg-tertiary">
-      <div className="px-14 py-10">{children}</div>
+    <div className="h-page overflow-auto py-10">
+      <div className="w-full">{children}</div>
     </div>
   );
 };

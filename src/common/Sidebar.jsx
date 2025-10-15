@@ -9,9 +9,9 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="h-100 overflow-auto b-shadow">
+    <div className="h-100 overflow-auto bg-white b-shadow bordr">
       <div className="p-10">
-        <h1 className="head-text text-forth">Fund Manager</h1>
+        <h1 className="head-text text-primary">Fund Manager</h1>
         <p className="small-text text-gray">What Are you Do!</p>
       </div>
       <div className="py-14 px-10">
@@ -74,7 +74,7 @@ const Sidebar = () => {
                         key={subIndex}
                         className={({ isActive }) =>
                           `flex items-center cursor-pointer gap-6 px-15 py-${
-                            isActive ? "8 bg-secondary" : "6"
+                            isActive ? "8 bg-secondary rounded-5" : "6"
                           }`
                         }
                         to={sub?.route}
