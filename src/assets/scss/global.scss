@@ -11490,6 +11490,15 @@ p {
   width: 38px !important;
   height: 38px !important;
 }
+.h-input{
+  height: 33px !important;
+  background: var(--white);
+  text-indent: 12px !important;
+  padding: 0px !important;
+}
+input:focus{
+ outline: 0px !important;
+}
 .h-100 {
   height: 100vh !important;
 }
@@ -11512,7 +11521,7 @@ p {
   border: 1px solid #ececec !important;
 }
 .bordb {
-  border-bottom: 1px solid var(--tertiary) !important;
+  border-bottom: 1px solid #c4bfbf29 !important;
 }
 .bordh {
   border-top: 1px solid var(--tertiary) !important;
@@ -11534,7 +11543,7 @@ tr {
   background: var(--white);
 }
 tr:nth-child(even):hover {
-  background: var(--tertiary);
+  background: var(--forth);
 }
 .table-w {
   width: 100% !important;

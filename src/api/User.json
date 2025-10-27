@@ -1,11 +1,42 @@
 [
   {
-    "name": "User",
-    "email": "User@barasingha.com",
+    "name": "Barasingha",
+    "email": "barasingha@gmail.com",
+    "mobile": "9807654321",
+    "password": "B6c8s3t678f$y",
+    "investors": ["Rahul", "Nikhil", "Virendar"],
+    "customers": ["CUSTTOMER1", "MSSP", "PLEXIFYER"],
+    "role": "Dev-Admin",
+    "status": true
+  },
+  {
+    "name": "Nikhil",
+    "email": "nikhil@gmail.com",
+    "mobile": "8977654321",
     "password": "Admin1234",
-    "status": true,
-    "category": true,
-    "customers": ["test", "Admin"],
-    "role": "Dev-Admin"
+    "investors": ["Rahul", "Virendar"],
+    "customers": ["PLEXIFYER"],
+    "role": "Admin",
+    "status": true
+  },
+  {
+    "name": "Govind",
+    "email": "kohad@gmail.com",
+    "mobile": "8987654321",
+    "password": "Admin1234",
+    "investors": ["Virendar"],
+    "customers": ["MSSP", "PLEXIFYER"],
+    "role": "Admin",
+    "status": true
+  },
+  {
+    "name": "Rahul",
+    "email": "rahul@gmail.com",
+    "mobile": "9767654321",
+    "password": "Admin1234",
+    "investors": ["Akshay"],
+    "customers": ["Jagdesh", "MSSP", "Jay"],
+    "role": "Admin",
+    "status": true
   }
 ]

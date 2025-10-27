@@ -6,6 +6,7 @@ const Chart = ({
   value,
   max = 100,
   color = "primary",
+  bg = "secondary",
   size = 100,
   thickness = 15,
   arraydata,
@@ -19,16 +20,21 @@ const Chart = ({
     success: "var(--success)",
     forth: "var(--forth)",
     danger: "var(--danger)",
+    white: "var(--white)",
+    gray: "var(--gray)",
     info: "var(--info)",
+    dark: "var(--dark)",
     primary: "var(--primarytext)",
+    transparent: "transparent",
   };
   const chartColor = colorMap[color] || colorMap.primary;
+  const bgColor = colorMap[bg] || colorMap.primary;
 
   if (type === "bar") {
     // ---- Bar Chart ----
     return (
-      <div className="w-full flex">
-        <div className="w-5 py-8 flex justify-start">
+      <div className="w-full flex py-20 px-16">
+        <div className="py-8 flex justify-start" style={{ width: "25px" }}>
           <div
             className="flex justify-between"
             style={{ flexDirection: "column", height: chartheight }}
@@ -42,7 +48,7 @@ const Chart = ({
               ))}
           </div>
         </div>
-        <div className="w-95">
+        <div className="w-full">
           <div
             className="gap-6 py-8 px-10 section_bg bordb bordl"
             style={{
@@ -75,9 +81,19 @@ const Chart = ({
               );
             })}
           </div>
-          <div className="grid-cols-12 gap-6 px-10 mt-4">
-            {arraydata?.map((e) => {
-              return <p className="mini-text text-center w-full">{e?.month}</p>;
+          <div
+            className="gap-6 px-10 mt-4"
+            style={{
+              display: "grid",
+              gridTemplateColumns: `repeat(${col}, 1fr)`,
+            }}
+          >
+            {arraydata?.map((e, i) => {
+              return (
+                <p className="mini-text text-center w-full" key={i}>
+                  {e?.title}
+                </p>
+              );
             })}
           </div>
         </div>
@@ -105,7 +121,6 @@ const Chart = ({
               transition: "background 0.4s ease",
             }}
           >
-            {/* Inner hollow circle */}
             <div
               className="absolute rounded-full"
               style={{
@@ -114,7 +129,6 @@ const Chart = ({
                 background: "var(--white)",
               }}
             />
-            {/* Percentage text */}
             <p className="absolute small-text font-semibold">
               {Math.round(percentage)}%
             </p>
@@ -129,13 +143,14 @@ const Chart = ({
       <div style={{ width: "100%" }}>
         {label && (
           <div className="flex items-center justify-between">
-            <p className="mini-text">{label}</p>
+            <p className="small-text text-gray font-500">{label}</p>
             <p className="mini-text">{Math.round(percentage)}%</p>
           </div>
         )}
         <div
-          className="rounded-5 overflow-hidden w-full bg-tertiary mt-2"
-          style={{ height: 10 }}
+          className="rounded-5 overflow-hidden w-full mt-4"
+          title={label ? "" : `${Math.round(percentage)}%`}
+          style={{ height: 8, background: bgColor }}
         >
           <div
             style={{
@@ -146,6 +161,31 @@ const Chart = ({
             }}
           />
         </div>
+      </div>
+    );
+  } else if (type === "heatmap") {
+    // ---- Heatmap Bar ----
+    return (
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: `repeat(${col}, 1fr)`,
+          gap: "8px",
+        }}
+      >
+        {arraydata?.map((e)=>{
+          return (
+            <div
+              className={`${
+                {
+                  success: "bg-success",
+                  failed: "bg-warning",
+                  pending: "bg-forth",
+                }[e?.status] || ""
+              } py-13 b-shadow rounded-5`}
+            ></div>
+          );
+        })}
       </div>
     );
   }

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Table = () => {
+const Login = () => {
   return (
     <div>
-      
+      hi
     </div>
   )
 }
 
-export default Table
+export default Login

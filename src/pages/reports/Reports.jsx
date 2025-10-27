@@ -1,11 +1,10 @@
 import React from "react";
 import Container from "../../utility/Container";
 import Table from "../../components/Table";
-import Chart from "../../components/Chart";
 import Pagination from "../../utility/Pagination";
-import Tabs from "../../utility/Tabs";
+import Chart from "../../components/Chart";
 
-const Management = () => {
+const Reports = () => {
   const header = [
     {
       name: "Title",
@@ -47,6 +46,18 @@ const Management = () => {
     },
     {
       title: "Title",
+      description: "Description",
+      status: "Status",
+      actions: "Actions",
+    },
+    {
+      title: "Title",
+      description: "New",
+      status: "Status",
+      actions: "why",
+    },
+    {
+      title: "Title",
       description: "view",
       status: "how",
       actions: "Actions",
@@ -64,204 +75,136 @@ const Management = () => {
       actions: "Actions",
     },
   ];
+  const ProgressData = [
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+  ];
   const [currentpage, setcurrentpage] = React.useState(0);
   const handlePageClick = (e) => {
     setcurrentpage(e.selected);
   };
-  const tabList = ["Assending", "Desending"];
-  const ProgressData = [
-    {
-      status: 'pending',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'pending',
-      amount: "2000",
-    },
-    {
-      status: 'pending',
-      amount: "2000",
-    },
-    {
-      status: 'failed',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'pending',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'failed',
-      amount: "2000",
-    },
-    {
-      status: 'failed',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'pending',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'failed',
-      amount: "2000",
-    },
-    {
-      status: 'failed',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'pending',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'failed',
-      amount: "2000",
-    },
-    {
-      status: 'failed',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'pending',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'failed',
-      amount: "2000",
-    },
-    {
-      status: 'failed',
-      amount: "2000",
-    },
-    {
-      status: 'success',
-      amount: "2000",
-    },
-    {
-      status: 'pending',
-      amount: "2000",
-    },
-  ];
-
-  const t = new Date();
-  const [y, setY] = React.useState(t.getFullYear());
-  const [m, setM] = React.useState(t.getMonth());
-  const [sel, setSel] = React.useState("");
-  const pad = (n) => String(n).padStart(2, "0");
-  const daysInMonth = new Date(y, m + 1, 0).getDate();
-  const first = new Date(y, m, 1).getDay();
-  const dayss = [
-    ...Array(first).fill(""),
-    ...Array.from({ length: daysInMonth }, (_, i) => i + 1),
-  ];
-  const monthss = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  const years = Array.from(
-    { length: 200 },
-    (_, i) => t.getFullYear() - 125 + i
-  );
-  const change = (d) => {
-    let ny = y,
-      nm = m + d;
-    if (nm < 0) (nm = 11), ny--;
-    if (nm > 11) (nm = 0), ny++;
-    setY(ny);
-    setM(nm);
-  };
-  function DataFlow() {
-    return (
-      <div className="grid-cols-1 gap-8">
-        <div className="grid-cols-2 gap-8">
-          <div className="bg-white rounded-5 flex items-center justify-center py-23">
-            <Chart
-              type="doughnut"
-              label="Activity"
-              value={65}
-              color="primary"
-              size={100}
-            />
-          </div>
-          <div className="bg-white rounded-5 flex items-center justify-center py-23">
-            <Chart
-              type="doughnut"
-              label="Response"
-              value={65}
-              color="primary"
-              size={100}
-            />
-          </div>
-        </div>
-        <div className="bg-white p-10 rounded-5">
-          <Chart type="heatmap" col={10} arraydata={ProgressData} />
-        </div>
-      </div>
-    );
-  }
 
   return (
     <Container>
@@ -324,15 +267,7 @@ const Management = () => {
         </button>
       </div>
       <div className="flex items-start gap-10 w-full mt-8">
-        <div className="w-65 grid-cols-1 gap-8">
-          <div className="grid-cols-2 gap-8">
-            <div className="bg-white rounded-5 p-12">
-              <Chart label="Management" value={90} color="primary" />
-            </div>
-            <div className="bg-white rounded-5 p-12">
-              <Chart label="Management" value={90} color="warning" />
-            </div>
-          </div>
+        <div className="w-70 grid-cols-1 gap-8">
           <div className="bg-white p-10 rounded-5">
             <Table
               header={header}
@@ -349,15 +284,49 @@ const Management = () => {
             />
           </div>
         </div>
-        <div className="w-35">
-          <Tabs tabs={tabList} tabIndex={tabList?.length}>
-            <DataFlow />
-            <DataFlow />
-          </Tabs>
+        <div className="w-30 grid-cols-1 gap-8">
+          <div className="grid-cols-3 gap-6 bg-white rounded-5">
+            <div className="py-12 text-center">
+              <h2 className="title-text text-success">120 K</h2>
+              <p className="mini-text text-gray">Total</p>
+            </div>
+            <div className="py-12 text-center bordl bordr">
+              <h2 className="title-text text-warning">520 L</h2>
+              <p className="mini-text text-gray">Inactive</p>
+            </div>
+            <div className="py-12 text-center">
+              <h2 className="title-text text-success">192 CR</h2>
+              <p className="mini-text text-gray">Active</p>
+            </div>
+          </div>
+          <div className="bg-white p-10 rounded-5">
+            <Chart type="heatmap" col={8} arraydata={ProgressData} />
+          </div>
+          <div className="bg-white grid-cols-1 rounded-5">
+            {[
+              { name: "NIFTY", value: "90%", color: "danger" },
+              { name: "Sensex", value: "90%", color: "danger" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bordb p-12 flex items-center justify-between"
+              >
+                <p className="small-text text-dark font-500">{item.name}</p>
+                <p className={`mini-text text-${item.color} font-600`}>
+                  {item.color === "success" ? "▲" : "▼"}
+                  {item.value}
+                </p>
+              </div>
+            ))}
+            <div className="p-12 flex items-center justify-between bg-secondary">
+              <p className="small-text text-dark font-500">Overall P&L</p>
+              <p className="small-text text-primary font-500">▲2%</p>
+            </div>
+          </div>
         </div>
       </div>
     </Container>
   );
 };
 
-export default Management;
+export default Reports;

@@ -12,18 +12,21 @@ const Table = ({
     warning: "var(--warning)",
     secondary: "var(--secondary)",
     success: "var(--success)",
+    tertiary: "var(--tertiary)",
     forth: "var(--forth)",
     danger: "var(--danger)",
     white: "var(--white)",
     gray: "var(--gray)",
     info: "var(--info)",
+    dark: "var(--dark)",
     primary: "var(--primarytext)",
+    transparent: "transparent",
   };
   const bgColor = colorMap[bg] || colorMap.primary;
   const textColor = colorMap[color] || colorMap.primary;
   const borderColor = colorMap[border] || colorMap.primary;
   return (
-    <div className="mt-8 table-w">
+    <div className="table-w">
       <table className="table">
         <thead>
           <tr>
@@ -36,10 +39,10 @@ const Table = ({
                     borderRight: `1px solid ${bgColor} !important`,
                     borderLeft: `1px solid ${bgColor} !important`,
                     color: `${textColor}`,
-                    minWidth: "170px",
+                    minWidth: "130px",
                   }}
                   key={index}
-                  className="py-8 px-12 border-0"
+                  className="py-10 px-12 border-0"
                 >
                   <p className={`small-text text-${textalign}`}>{head?.name}</p>
                 </th>
@@ -50,20 +53,27 @@ const Table = ({
         <tbody>
           {arraydata.map((row, rowIndex) => (
             <tr key={rowIndex}>
-              {header.map((head, colIndex) => {
-                const key = head.name.toLowerCase();
+              {header.map((h, j) => {
+                const v = row[h?.feilds?.toLowerCase()];
+                const val = Array.isArray(v)
+                  ? v.join(", ")
+                  : typeof v === "boolean"
+                  ? v
+                    ? "Active"
+                    : "Inactive"
+                  : v || "--";
                 return (
                   <td
-                    key={colIndex}
+                    key={j}
                     style={{
-                      borderRight: `1px solid ${borderColor}`,
-                      borderLeft: `1px solid ${borderColor}`,
-                      borderBottom: `1px solid ${borderColor}`,
-                      minWidth: "170px",
+                      borderRight: `1px solid #ececec`,
+                      borderLeft: `1px solid #ececec`,
+                      borderBottom: `1px solid #ececec`,
+                      minWidth: "130px",
                     }}
-                    className={`py-8 px-12 text-${textalign}`}
+                    className={`py-10 px-12 text-${textalign}`}
                   >
-                    <p className="mini-text text-gray">{row[key] || "--"}</p>
+                    <p className="mini-text text-gray">{val}</p>
                   </td>
                 );
               })}

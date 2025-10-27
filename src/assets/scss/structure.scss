@@ -9287,16 +9287,26 @@
     rgba(115, 103, 240, 0.7) 0%,
     #7367f0 100%
   ) !important;
-  --primarytext: #534aafb7 !important;
+  --primarytext: #8178c1 !important;
   --secondary: #f7f1f17b !important;
   --tertiary: #e7e6ec !important;
-  --forth: #b9aeae4a !important;
-  --success: #16780fc6 !important;
-  --warning: #ff5722 !important;
-  --danger: #d91831 !important;
+  --forth: #ececec !important;
+  --success: linear-gradient(
+    270deg,
+    #77cc70bc 0%,
+    #25771fbc 100%
+  ) !important;
+  --successtext: #25771fbc !important;
+  --warning: linear-gradient(
+    270deg,
+    #e6a794 0%,
+    #ff5722 100%
+  ) !important;
+  --warningtext: #ff5722 !important;
+  --danger: #c21b1bdb !important;
   --info: #2378bdb7 !important;
   --white: #fff !important;
-  --dark: #000 !important;
+  --dark: #373737 !important;
   --gray: #585a63 !important;
 }
 .dark-mode {
@@ -9379,10 +9389,10 @@
   color: var(--forth);
 }
 .text-success {
-  color: var(--success);
+  color: var(--successtext);
 }
 .text-warning {
-  color: var(--warning);
+  color: var(--warningtext);
 }
 .text-danger {
   color: var(--danger);
@@ -9478,9 +9488,10 @@ input,
 /* ======================= Start-scrollbar ======================= */
 ::-webkit-scrollbar {
   width: 0px;
+  height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ececec !important;
+  background: var(--forth);
 }
 .newscroll::-webkit-scrollbar {
   width: 0px;
@@ -9523,7 +9534,7 @@ input,
   font-weight: 400 !important;
 }
 .mini-text {
-  font-size: 11px !important;
+  font-size: 12px !important;
   line-height: 16px !important;
   font-weight: 400 !important;
 }
