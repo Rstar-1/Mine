@@ -6,76 +6,76 @@ import Chart from "../../components/Chart";
 import Feilds from "../../utility/Feilds";
 
 const Investor = () => {
-//   const header = [
-//     {
-//       name: "Title",
-//     },
-//     {
-//       name: "Status",
-//     },
-//     {
-//       name: "Description",
-//     },
-//     {
-//       name: "Actions",
-//     },
-//   ];
-//   const column = [
-//     {
-//       title: "Title",
-//       description: "Description",
-//       status: "Status",
-//       actions: "Actions",
-//     },
-//     {
-//       title: "Title",
-//       description: "New",
-//       status: "Status",
-//       actions: "why",
-//     },
-//     {
-//       title: "Title",
-//       description: "Description",
-//       status: "Status",
-//       actions: "Actions",
-//     },
-//     {
-//       title: "Title",
-//       description: "New",
-//       status: "Status",
-//       actions: "why",
-//     },
-//     {
-//       title: "Title",
-//       description: "Description",
-//       status: "Status",
-//       actions: "Actions",
-//     },
-//     {
-//       title: "Title",
-//       description: "New",
-//       status: "Status",
-//       actions: "why",
-//     },
-//     {
-//       title: "Title",
-//       description: "view",
-//       status: "how",
-//       actions: "Actions",
-//     },
-//     {
-//       title: "Title",
-//       description: "New",
-//       status: "Status",
-//       actions: "why",
-//     },
-//     {
-//       title: "Title",
-//       description: "view",
-//       status: "how",
-//       actions: "Actions",
-//     },
-//   ];
+  //   const header = [
+  //     {
+  //       name: "Title",
+  //     },
+  //     {
+  //       name: "Status",
+  //     },
+  //     {
+  //       name: "Description",
+  //     },
+  //     {
+  //       name: "Actions",
+  //     },
+  //   ];
+  //   const column = [
+  //     {
+  //       title: "Title",
+  //       description: "Description",
+  //       status: "Status",
+  //       actions: "Actions",
+  //     },
+  //     {
+  //       title: "Title",
+  //       description: "New",
+  //       status: "Status",
+  //       actions: "why",
+  //     },
+  //     {
+  //       title: "Title",
+  //       description: "Description",
+  //       status: "Status",
+  //       actions: "Actions",
+  //     },
+  //     {
+  //       title: "Title",
+  //       description: "New",
+  //       status: "Status",
+  //       actions: "why",
+  //     },
+  //     {
+  //       title: "Title",
+  //       description: "Description",
+  //       status: "Status",
+  //       actions: "Actions",
+  //     },
+  //     {
+  //       title: "Title",
+  //       description: "New",
+  //       status: "Status",
+  //       actions: "why",
+  //     },
+  //     {
+  //       title: "Title",
+  //       description: "view",
+  //       status: "how",
+  //       actions: "Actions",
+  //     },
+  //     {
+  //       title: "Title",
+  //       description: "New",
+  //       status: "Status",
+  //       actions: "why",
+  //     },
+  //     {
+  //       title: "Title",
+  //       description: "view",
+  //       status: "how",
+  //       actions: "Actions",
+  //     },
+  //   ];
   const days = [
     { title: "2014", value: 2000 },
     { title: "2015", value: 7000 },
@@ -91,6 +91,122 @@ const Investor = () => {
     { title: "2025", value: 7800 },
   ];
   const ProgressData = [
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "pending",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "failed",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
+    {
+      status: "success",
+      amount: "2000",
+    },
     {
       status: "pending",
       amount: "2000",
@@ -286,102 +402,118 @@ const Investor = () => {
           </div>
         </div>
         <div className="w-35 grid-cols-1 gap-8">
-          <div className="bg-white p-10 rounded-5">
-            <Chart type="heatmap" col={10} arraydata={ProgressData} />
-          </div>
-          <div className="bg-white grid-cols-1 rounded-5">
+          <div className="bg-white grid-cols-1 rounded-5 p-10">
+            <h6 className="mid-text bordb pb-7 text-gray font-600">
+              Bussiness Target
+            </h6>
             {[
-              { name: "Sensex", value: "90%", color: "danger" },
-              { name: "NIFTY", value: "90%", color: "success" },
-              { name: "Sensex", value: "90%", color: "success" },
-              { name: "Sensex", value: "90%", color: "danger" },
-              { name: "Sensex", value: "90%", color: "danger" },
+              {
+                name: "NIFTY",
+                description: "What he get",
+                value: 87,
+                color: "success",
+              },
+              {
+                name: "Sensex",
+                description: "What he get",
+                value: 12,
+                color: "danger",
+              },
+              {
+                name: "Sensex",
+                description: "What he get",
+                value: 98,
+                color: "success",
+              },
             ].map((item, i) => (
-              <div
-                key={i}
-                className="bordb p-12 flex items-center justify-between"
-              >
-                <p className="small-text text-dark font-500">{item.name}</p>
-                <p className={`mini-text text-${item.color} font-600`}>
-                  {item.color === "success" ? "▲" : "▼"}
-                  {item.value}
+              <div key={i} className="flex items-center justify-between py-9">
+                <div className="flex items-center gap-10">
+                  <img
+                    src={
+                      item?.color === "success"
+                        ? "https://charming-mooncake-ed24f0.netlify.app/static/media/gold.2fc0ed44a48b3ebb6ec5.png"
+                        : // ? "https://charming-mooncake-ed24f0.netlify.app/static/media/copper.a57a6603bd213a91f691.png"
+                          "https://charming-mooncake-ed24f0.netlify.app/static/media/silver.2bea58ef1c92c2b33a4b.png"
+                    }
+                    alt="coin"
+                    className="flex common-img object-contain"
+                  />
+                  <div>
+                    <p className="para-text text-dark font-500">{item.name}</p>
+                    <p className="mini-text text-gray font-400">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+                <p className={`small-text text-success font-500`}>
+                  +{item.value}K
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="bg-white grid-cols-1 rounded-5 p-10">
+            <h6 className="mid-text bordb pb-6 text-gray font-600">
+              Company Target
+            </h6>
+            {[
+              {
+                name: "NIFTY",
+                description: "What he get",
+                value: 87,
+                color: "success",
+              },
+              {
+                name: "Sensex",
+                description: "What he get",
+                value: 12,
+                color: "danger",
+              },
+              {
+                name: "Sensex",
+                description: "What he get",
+                value: 98,
+                color: "success",
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center justify-between py-9">
+                <div className="flex items-center gap-10">
+                  <img
+                    src={
+                      item?.color === "success"
+                        ? "https://charming-mooncake-ed24f0.netlify.app/static/media/gold.2fc0ed44a48b3ebb6ec5.png"
+                        : // ? "https://charming-mooncake-ed24f0.netlify.app/static/media/copper.a57a6603bd213a91f691.png"
+                          "https://charming-mooncake-ed24f0.netlify.app/static/media/silver.2bea58ef1c92c2b33a4b.png"
+                    }
+                    alt="coin"
+                    className="flex common-img object-contain"
+                  />
+                  <div>
+                    <p className="para-text text-dark font-500">{item.name}</p>
+                    <p className="mini-text text-gray font-400">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+                <p className={`small-text text-success font-500`}>
+                  +{item.value}K
                 </p>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className="grid-cols-3 gap-8 items-start mt-8">
-        <div className="grid-cols-1 gap-6">
-          <div className="bg-white grid-cols-1 rounded-5">
-            {[
-              { name: "Sensex", value: "90%", color: "danger" },
-              { name: "Sensex", value: "90%", color: "danger" },
-              { name: "NIFTY", value: "90%", color: "success" },
-              { name: "NIFTY", value: "90%", color: "success" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bordb p-12 flex items-center justify-between"
-              >
-                <p className="small-text text-dark font-500">{item.name}</p>
-                <p className={`mini-text text-${item.color} font-600`}>
-                  {item.color === "success" ? "▲" : "▼"}
-                  {item.value}
-                </p>
-              </div>
-            ))}
-            <div className="p-12 flex items-center justify-between bg-secondary">
-              <p className="small-text text-dark font-500">Overall P&L</p>
-              <p className="small-text text-primary font-500">▲2%</p>
-            </div>
-          </div>
-        </div>
-        <div className="grid-cols-1 gap-6">
-          <div className="grid-cols-3 gap-6 bg-white rounded-5">
-            <div className="py-12 text-center">
-              <h2 className="title-text text-success">120 K</h2>
-              <p className="mini-text text-gray">Total</p>
-            </div>
-            <div className="py-12 text-center bordl bordr">
-              <h2 className="title-text text-warning">520 L</h2>
-              <p className="mini-text text-gray">Inactive</p>
-            </div>
-            <div className="py-12 text-center">
-              <h2 className="title-text text-success">192 CR</h2>
-              <p className="mini-text text-gray">Active</p>
-            </div>
-          </div>
+      <div className="flex gap-8 items-start mt-8">
+        <div className="grid-cols-1 gap-6 w-30">
           <div className="bg-white rounded-5 p-12">
-            <Chart label="Management" value={90} color="success" />
+            <Chart label="Management" value={90} color="primary" />
           </div>
           <div className="bg-white rounded-5 p-12">
             <Chart label="Management" value={90} color="warning" />
           </div>
         </div>
-        <div className="grid-cols-1 gap-6">
-          <div className="bg-white rounded-5 p-10">
-            <p className="para-text text-gray font-500">Activity</p>
-          </div>
-          <div className="grid-cols-2 gap-8">
-            <div className="bg-white rounded-5 flex items-center justify-center py-23">
-              <Chart
-                type="doughnut"
-                label="Activity"
-                value={65}
-                color="primary"
-                size={100}
-              />
-            </div>
-            <div className="bg-white rounded-5 flex items-center justify-center py-23">
-              <Chart
-                type="doughnut"
-                label="Response"
-                value={65}
-                color="primary"
-                size={100}
-              />
-            </div>
+        <div className="grid-cols-1 gap-6 w-70">
+          <div className="bg-white p-12 rounded-5">
+            <Chart type="heatmap" col={20} arraydata={ProgressData} />
           </div>
         </div>
       </div>

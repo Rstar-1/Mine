@@ -3,76 +3,29 @@ import Container from "../../utility/Container";
 import Table from "../../components/Table";
 import Pagination from "../../utility/Pagination";
 import Chart from "../../components/Chart";
+import User from "../../api/User.json";
 
 const Reports = () => {
   const header = [
     {
       name: "Title",
+      feilds: "title",
+    },
+    {
+      name: "Investor",
+      feilds: "investor",
+    },
+    {
+      name: "Amount",
+      feilds: "amount",
+    },
+    {
+      name: "Severity",
+      feilds: "category",
     },
     {
       name: "Status",
-    },
-    {
-      name: "Description",
-    },
-    {
-      name: "Actions",
-    },
-  ];
-  const column = [
-    {
-      title: "Title",
-      description: "Description",
-      status: "Status",
-      actions: "Actions",
-    },
-    {
-      title: "Title",
-      description: "New",
-      status: "Status",
-      actions: "why",
-    },
-    {
-      title: "Title",
-      description: "Description",
-      status: "Status",
-      actions: "Actions",
-    },
-    {
-      title: "Title",
-      description: "New",
-      status: "Status",
-      actions: "why",
-    },
-    {
-      title: "Title",
-      description: "Description",
-      status: "Status",
-      actions: "Actions",
-    },
-    {
-      title: "Title",
-      description: "New",
-      status: "Status",
-      actions: "why",
-    },
-    {
-      title: "Title",
-      description: "view",
-      status: "how",
-      actions: "Actions",
-    },
-    {
-      title: "Title",
-      description: "New",
-      status: "Status",
-      actions: "why",
-    },
-    {
-      title: "Title",
-      description: "view",
-      status: "how",
-      actions: "Actions",
+      feilds: "Status",
     },
   ];
   const ProgressData = [
@@ -271,7 +224,7 @@ const Reports = () => {
           <div className="bg-white p-10 rounded-5">
             <Table
               header={header}
-              arraydata={column}
+              arraydata={User}
               bg="forth"
               color="dark"
               border="forth"

@@ -6,7 +6,7 @@ const Table = ({
   border = "forth",
   textalign = "left",
   header,
-  arraydata,
+  arraydata = [],
 }) => {
   const colorMap = {
     warning: "var(--warning)",

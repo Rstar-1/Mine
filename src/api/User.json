@@ -7,6 +7,18 @@
     "investors": ["Rahul", "Nikhil", "Virendar"],
     "customers": ["CUSTTOMER1", "MSSP", "PLEXIFYER"],
     "role": "Dev-Admin",
+    "vip": true,
+    "status": true
+  },
+  {
+    "name": "Raj",
+    "email": "raj@gmail.com",
+    "mobile": "8977654321",
+    "password": "Admin1234",
+    "investors": ["Rahul", "Virendar"],
+    "customers": ["PLEXIFYER"],
+    "role": "Admin",
+    "vip": true,
     "status": true
   },
   {
@@ -17,6 +29,7 @@
     "investors": ["Rahul", "Virendar"],
     "customers": ["PLEXIFYER"],
     "role": "Admin",
+    "vip": true,
     "status": true
   },
   {
@@ -27,6 +40,7 @@
     "investors": ["Virendar"],
     "customers": ["MSSP", "PLEXIFYER"],
     "role": "Admin",
+    "vip": true,
     "status": true
   },
   {
@@ -37,6 +51,7 @@
     "investors": ["Akshay"],
     "customers": ["Jagdesh", "MSSP", "Jay"],
     "role": "Admin",
+    "vip": true,
     "status": true
   }
 ]

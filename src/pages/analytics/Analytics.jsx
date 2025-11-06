@@ -2,7 +2,8 @@ import React from "react";
 import Container from "../../utility/Container";
 import Table from "../../components/Table";
 import Pagination from "../../utility/Pagination";
-import User from '../../api/User.json'
+import User from '../../api/User.json';
+import Customer from '../../api/Customer.json';
 
 const Analytics = () => {
   const header = [
@@ -19,22 +20,48 @@ const Analytics = () => {
       feilds: "Mobile",
     },
     {
-      name: "Role",
-      feilds: "role",
+      name: "Category",
+      feilds: "category",
     },
     {
-      name: "Customers",
-      feilds: "Customers",
-    },
-    {
-      name: "Investors",
-      feilds: "Investors",
+      name: "Code",
+      feilds: "code",
     },
     {
       name: "Status",
       feilds: "Status",
     },
   ];
+  // const header = [
+  //   {
+  //     name: "Name",
+  //     feilds: "Name",
+  //   },
+  //   {
+  //     name: "Email",
+  //     feilds: "Email",
+  //   },
+  //   {
+  //     name: "Mobile",
+  //     feilds: "Mobile",
+  //   },
+  //   {
+  //     name: "Role",
+  //     feilds: "role",
+  //   },
+  //   {
+  //     name: "Customers",
+  //     feilds: "Customers",
+  //   },
+  //   {
+  //     name: "Investors",
+  //     feilds: "Investors",
+  //   },
+  //   {
+  //     name: "Status",
+  //     feilds: "Status",
+  //   },
+  // ];
   const [currentpage, setcurrentpage] = React.useState(0);
   const handlePageClick = (e) => {
     setcurrentpage(e.selected);
@@ -101,7 +128,8 @@ const Analytics = () => {
         <div className="bg-white p-10 rounded-5">
           <Table
             header={header}
-            arraydata={User}
+            arraydata={Customer}
+            // arraydata={User}
             bg="primary"
             color="white"
             border="primary"
