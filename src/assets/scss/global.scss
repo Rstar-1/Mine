@@ -11490,6 +11490,10 @@ p {
   width: 38px !important;
   height: 38px !important;
 }
+.h-select{
+  height: 33px !important;
+  background: var(--white);
+}
 .h-input{
   height: 33px !important;
   background: var(--white);
@@ -11531,6 +11535,15 @@ input:focus{
 }
 .bordr {
   border-right: 1px solid var(--tertiary) !important;
+}
+input[type="checkbox"] {
+  width: 10px !important;
+  height: 10px !important;
+  cursor: pointer;
+  accent-color: var(--primarytext);
+  margin: 0 !important;
+  flex-shrink: 0;
+  transition: filter 0.2s ease;
 }
 /* ======================= End-Common ======================= */
 

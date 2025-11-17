@@ -29,7 +29,7 @@ const Tabs = ({ tabs = [], children, tabIndex = 3 }) => {
           </p>
         ))}
       </div>
-      <div className="mt-8">
+      <div>
         {Array.isArray(children) ? children[activeIndex] : children}
       </div>
     </>

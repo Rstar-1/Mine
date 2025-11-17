@@ -25,7 +25,7 @@ const Sidebar = () => {
                     isActive ? "10" : "9"
                   } ${
                     isActive && !item.category?.length
-                      ? "bg-secondary"
+                      ? "bg-forth"
                       : "bg-white"
                   }`
                 }
@@ -74,7 +74,7 @@ const Sidebar = () => {
                         key={subIndex}
                         className={({ isActive }) =>
                           `flex items-center cursor-pointer gap-6 px-15 py-${
-                            isActive ? "8 bg-secondary rounded-5" : "6"
+                            isActive ? "8 bg-forth rounded-5" : "6"
                           }`
                         }
                         to={sub?.route}

@@ -422,7 +422,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="w-35">
+        <div className="w-35 grid-cols-1 gap-8">
           <Tabs tabs={tabList} tabIndex={tabList?.length}>
             <DataFlow dashboards={Investor} />
             <DataFlow dashboards={Customers} />

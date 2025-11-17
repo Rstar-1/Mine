@@ -9,6 +9,7 @@ const Activity = lazy(() => import("./pages/activity/Activity"));
 const Reports = lazy(() => import("./pages/reports/Reports"));
 const Analytics = lazy(() => import("./pages/analytics/Analytics"));
 const Investor = lazy(() => import("./pages/investor/Investor"));
+const TableStructure = lazy(() => import("./pages/structure/TableStructure"));
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           <Route path="bussiness-user-engagement" element={<Reports />} />
           <Route path="investor" element={<Analytics />} />
           <Route path="reports" element={<Analytics />} />
-          <Route path="users" element={<Analytics />} />
+          <Route path="users" element={<TableStructure />} />
           <Route path="customers" element={<Analytics />} />
         </Route>
       </Routes>

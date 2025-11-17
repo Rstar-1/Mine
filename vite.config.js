@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: "0.0.0.0",
-    port: 5173,
+    port: 5174,
   },
 });
-// npm run dev -- --host=192.168.0.1 --port=5173
+// npm run dev -- --host=192.168.0.1 --port=5174
